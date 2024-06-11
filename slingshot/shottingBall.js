@@ -115,6 +115,17 @@ render.canvas.addEventListener("click", function () {
       fillStyle: "#FF0000", // 공 색상 설정
     },
   });
+  //   Bodies.circle(x, y, 46, {
+  //     density: 0.0005,
+  //     frictionAir: 0.06,
+  //     restitution: 0.3,
+  //     friction: 0.01,
+  //     render: {
+  //         sprite: {
+  //             texture: './img/ball.png'
+  //         }
+  //     }
+  // }); 공에 이미지를 입힐수 있더라. 그러면 과녁에도 이미지를 입힐수 있지 않을까.
 
   // 초기 힘 설정
   const forceMagnitude = 0.11;
