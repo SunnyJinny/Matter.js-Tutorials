@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Fluid</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/matter-js/0.18.0/matter.min.js"></script>
+    <link rel="stylesheet" href="fluidStyle.css" />
     <style>
       body {
         margin: 0;
@@ -13,21 +14,38 @@
     </style>
   </head>
   <body>
-    <!-- <script src="slingshot.js" async></script> -->
-    <!-- <script src="happybirthday.js" async></script> -->
-    <img
+    <canvas id="matter-canvas"></canvas>
+
+    <svg>
+      <defs>
+        <filter id="gooey">
+          <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur" />
+          <feColorMatrix
+            in="blur"
+            type="matrix"
+            values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 30 -5"
+            result="goo"
+          />
+        </filter>
+      </defs>
+    </svg>
+
+    <img id="glass" src="../images/testCup 1.png" alt="glass" />
+
+    <!-- <img
       id="cylinder"
       src="../images/cylinder.svg"
       alt="cylinder"
       style="
-        width: 300px;
-        height: 200px;
+        width: 520px;
+        height: 320px;
         position: absolute;
-        top: 50%;
+        top: 33%;
         left: 50%;
         transform: translate(-50%, -50%);
       "
-    />
+    /> -->
     <script src="fluidInCylinder.js" async></script>
+    <!-- <script src="test.js" async></script> -->
   </body>
 </html>
